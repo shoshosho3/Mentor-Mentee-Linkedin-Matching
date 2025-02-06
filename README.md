@@ -29,14 +29,11 @@
 3. **Mentor Archetype Calculation**:
     - A mentor archetype is derived by averaging mentor embeddings to create a baseline representative embedding.
 
-4. **Similarity Calculation**:
-    - Cosine similarity metrics are calculated between mentee and mentor embeddings to measure compatibility.
-
-5. **Data Matching**:
+4. **Data Matching**:
     - Cartesian join is performed to generate mentor-mentee combinations.
     - Feature vectors include attributes like `followers`, `posts`, `certifications`, and `experience lengths` of both parties.
 
-6. **Classification Models**:
+5. **Classification Models**:
     - Machine learning algorithms, e.g., GBT and Logistic Regression, are trained on labeled data to classify suitable mentors.
 
 ### Machine Learning Models:
@@ -71,7 +68,16 @@ The project provides mentees with a ranked list of potential mentors from a larg
     - Linked profiles (URLs, if provided).
 
 ## Usage Instructions
-### Running the Project:
+
+### Simple Application Run:
+1. **Check for Required Files**:
+    - Ensure the necessary files (`ytb_train_data.parquet`, `ytb_gbt_model`) are present.
+
+2. **Execute `Find My Mentor.ipynb`**:
+    - Enter mentee details and run the notebook to get mentor recommendations.
+
+
+### Running the Full Project:
 1. Ensure the necessary dependencies are installed:
     - `PySpark`, `Spark NLP`, and ML libraries (e.g., `pandas`, `scikit-learn`).
 
@@ -93,10 +99,6 @@ Install the following Python packages:
 ``` bash
 pip install pyspark sparknlp pandas requests beautifulsoup4 scikit-learn
 ```
-## Future Scope
-- **Dynamic Model Updates**: Incorporate real-time feedback from matched pairs to improve the recommendation algorithm.
-- **Enhanced Scraping**: Include multiple mentorship platforms for broader data diversity.
-- **Exploratory Features**: Add more features like industry alignment, location preferences, etc.
 
 ## Folder Structure:
 ``` plaintext
